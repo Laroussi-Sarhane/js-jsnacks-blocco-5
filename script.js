@@ -53,3 +53,18 @@ const zucchine = [
 
 const pesoTotale = zucchine.reduce((totale, zucchine) => totale + zucchine.peso, 0);
  console.log(pesoTotale);
+
+ const short = zucchine.filter(zucchina => zucchina.lunghezza < 15);
+ const long  = zucchine.filter(zucchina => zucchina.lunghezza > 15); 
+
+ console.log(long);
+ console.log(short);
+
+ //adesso vado A sommare tuute le zucchine short e quelle long
+
+ const totalShort = short.reduce((totale, zucchine) => totale + zucchine.peso, 0);
+
+ const totalLong = long.reduce((totale, zucchine) => totale + zucchine.peso, 0);
+
+ console.log(totalShort);
+ console.log(totalLong);
