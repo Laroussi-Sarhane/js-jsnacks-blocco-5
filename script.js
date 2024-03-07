@@ -1,52 +1,55 @@
 const zucchine = [
   {
-    type: zucchinaUno,
+    type: 'zucchineNere',
     peso: 200,
     lunghezza: 33
   },
   {
-    type: zucchinaDue,
+    type: 'zucchinaDue',
     peso: 150,
     lunghezza: 30
   },
   {
-    type: zucchinaTre,
+    type: 'zucchinaTre',
     peso: 180,
     lunghezza: 27
   },
   {
-    type: zucchinaQuattro,
+    type: 'zucchinaQuattro',
     peso: 300,
     lunghezza: 20
   },
   {
-    type: zucchinaCinque,
+    type: 'zucchinaCinque',
     peso: 190,
     lunghezza: 26
   },
   {
-    type: zucchinaSei,
+    type: 'zucchinaSei',
     peso: 100,
     lunghezza: 12
   },
   {
-    type: zucchinaSette,
+    type: 'zucchinaSette',
     peso: 400,
     lunghezza: 19
   },
   {
-    type: zucchinaOtto,
+    type: 'zucchinaOtto',
     peso: 230,
     lunghezza: 14
   },
   {
-    type: zucchinaNove,
+    type: 'zucchinaNove',
     peso: 290,
     lunghezza: 40
   },
   {
-    type: zucchinaDieci,
+    type: 'zucchinaDieci',
     peso: 50,
     lunghezza: 7
   },
 ]
+
+const pesoTotale = zucchine.reduce((totale, zucchine) => totale + zucchine.peso, 0);
+ console.log(pesoTotale);
