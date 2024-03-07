@@ -68,3 +68,24 @@ const pesoTotale = zucchine.reduce((totale, zucchine) => totale + zucchine.peso,
 
  console.log(totalShort);
  console.log(totalLong);
+
+
+ const parola = 'ciclamino'
+ const parolaGirata = giraParola(parola);
+
+ console.log(parolaGirata);
+
+ function giraParola(parola){
+  return parola.split('').reverse().join('');
+ }
+
+ const alfabeto = [ 'a', 'ab', 'ac', 'ad', 'ae'];
+
+ const numeri = ['1','2','3','4','5','6','7','8'];
+
+ const mix = createMix();
+
+
+ function createMix(){
+  
+ }
