@@ -87,5 +87,10 @@ const pesoTotale = zucchine.reduce((totale, zucchine) => totale + zucchine.peso,
 
 
  function createMix(){
-  
+  const mix = []
+
+  for(let i=0; i<8; i++){
+    mix.push(numeri[i], alfabeto[i])
+    console.log(mix);
+  }
  }
