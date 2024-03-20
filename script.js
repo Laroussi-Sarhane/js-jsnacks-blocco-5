@@ -51,9 +51,19 @@ const zucchine = [
   },
 ]
 
-const pesoTotale = zucchine.reduce((totale, zucchine) => totale + zucchine.peso, 0);
- console.log(pesoTotale);
+const pesoTotale = zucchine.reduce((totale, zucchine) => {
+  console.log('totale=',totale)
+  return totale + zucchine.peso 
+  
+  
 
+},0);
+ console.log(pesoTotale);
+ 
+ 
+
+
+ //creo due costanti e gli metto il filter per creare 2 array 
  const short = zucchine.filter(zucchina => zucchina.lunghezza < 15);
  const long  = zucchine.filter(zucchina => zucchina.lunghezza > 15); 
 
@@ -61,8 +71,11 @@ const pesoTotale = zucchine.reduce((totale, zucchine) => totale + zucchine.peso,
  console.log(short);
 
  //adesso vado A sommare tuute le zucchine short e quelle long
+ //riprendo la formula di prima che devo ancora capire (chiedi al prof)
 
  const totalShort = short.reduce((totale, zucchine) => totale + zucchine.peso, 0);
+
+ //creo totale short e utilizzo il reduce 
 
  const totalLong = long.reduce((totale, zucchine) => totale + zucchine.peso, 0);
 
@@ -94,3 +107,18 @@ const pesoTotale = zucchine.reduce((totale, zucchine) => totale + zucchine.peso,
     console.log(mix);
   }
  }
+ function createNum(){
+  const alfanum = []
+  
+  const limit = Math.min(numeri.length, lettere.length)
+  console.log(limit);
+  
+  for(let i=0; i<limit;i++){
+    alfanum.push(numeri[i],lettere[i])
+    console.log(alfanum);
+  }
+  
+  alfanum.push(...numeri.slice(limit),...lettere.slice(limit))
+  console.log(alfanum);
+  return alfanum
+}
